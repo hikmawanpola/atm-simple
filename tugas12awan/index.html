@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Simple</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Halaman Login -->
+    <div class="login-container" id="login-container">
+      <h2>ATM Simple Login</h2>
+      <input
+        type="password"
+        id="pin"
+        placeholder="Enter 6-digit PIN"
+        maxlength="6"
+      />
+      <button id="login-btn" onclick="login()">Login</button>
+      <p id="error-message" style="color: red"></p>
+    </div>
+
+    <!-- Popup Main Menu setelah login -->
+    <div class="atm-container" id="atm-container" style="display: none">
+      <div class="balance">
+        <p>Saldo: <span id="balance">$0</span></p>
+      </div>
+      <div class="transaction">
+        <input type="number" id="amount" placeholder="Amount" />
+        <div class="buttons">
+          <button id="deposit-btn" onclick="deposit()">Deposit</button>
+          <button id="withdraw-btn" onclick="withdraw()">Withdraw</button>
+        </div>
+      </div>
+      <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
